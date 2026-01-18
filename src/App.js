@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { X, Mail, Github, Linkedin } from 'lucide-react';
 
 // Données des projets - remplace par tes propres images et infos
@@ -92,30 +92,18 @@ const projects = [
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeSection, setActiveSection] = useState('work');
-  const [fontLoaded, setFontLoaded] = useState(false);
-
-  useEffect(() => {
-    // Charger les fonts Velvetyne
-    const fonts = [
-      'https://velvetyne.fr/fonts/basteleur/basteleur.css',
-      'https://velvetyne.fr/fonts/flor-de-ruina/flor-de-ruina.css',
-      'https://velvetyne.fr/fonts/avara/avara.css'
-    ];
-    
-    fonts.forEach(fontUrl => {
-      const link = document.createElement('link');
-      link.href = fontUrl;
-      link.rel = 'stylesheet';
-      document.head.appendChild(link);
-    });
-    
-    setFontLoaded(true);
-  }, []);
 
   return (
     <div className="min-h-screen bg-black text-white" style={{ fontFamily: "'Inter', sans-serif" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+        
+        @font-face {
+          font-family: 'Flor de Ruina';
+          src: url('./fonts/FlorDeRuina-Flor.woff2') format('woff2');
+          font-weight: normal;
+          font-style: normal;
+        }
         
         .basteleur {
           font-family: 'Basteleur', serif;
@@ -136,7 +124,10 @@ function App() {
       {/* Header */}
       <header className="fixed top-0 w-full bg-black border-b border-gray-800 z-40">
         <nav className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-          <h1 className="text-5xl flor-de-ruina tracking-wide">TON NOM</h1>
+          <div className="flex items-center gap-4">
+            <img src="/test.png" alt="test" className="h-12 w-12 object-contain" />
+            <h1 className="text-5xl flor-de-ruina tracking-wide">TON NOM</h1>
+          </div>
           <div className="flex gap-8">
             <button
               onClick={() => setActiveSection('work')}
