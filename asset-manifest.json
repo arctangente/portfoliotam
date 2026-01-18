@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/portfoliotam/static/css/main.eb941eec.css",
+    "main.js": "/portfoliotam/static/js/main.6da30593.js",
+    "static/js/453.bec99540.chunk.js": "/portfoliotam/static/js/453.bec99540.chunk.js",
+    "static/media/FlorDeRuina-Flor.woff2": "/portfoliotam/static/media/FlorDeRuina-Flor.7a369981f316ab4a03bb.woff2",
+    "index.html": "/portfoliotam/index.html",
+    "main.eb941eec.css.map": "/portfoliotam/static/css/main.eb941eec.css.map",
+    "main.6da30593.js.map": "/portfoliotam/static/js/main.6da30593.js.map",
+    "453.bec99540.chunk.js.map": "/portfoliotam/static/js/453.bec99540.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb941eec.css",
+    "static/js/main.6da30593.js"
+  ]
+}
