@@ -10,7 +10,7 @@ import basteleurReg from './fonts/Basteleur-Bold.woff2';
 import karrikReg from './fonts/Karrik-Regular.woff2';
 import wingSfx from './assets/sounds/heaven.mp3';
 import evilSfx from './assets/sounds/mystere.mp3';
-import maPhoto from './assets/artistpic.png';
+import maPhoto from './assets/artistpic.webp';
 import React, { useEffect, useState } from "react";
 
 // Projet 1: Vengeance
@@ -58,6 +58,41 @@ import c5 from './assets/photos/croco5.webp';
 import c6 from './assets/photos/croco6.webp';
 import c7 from './assets/photos/croco7.webp';
 import c8 from './assets/photos/croco8.webp';
+
+
+// Projet 7: Carroussel
+import carou1 from './assets/photos/carroussel1.webp';
+import carou2 from './assets/photos/carroussel2.webp';
+import carou3 from './assets/photos/carroussel3.webp';
+import carou4 from './assets/photos/carroussel4.webp';
+import carou5 from './assets/photos/carroussel5.webp';
+
+// Projet 8: Hotwheels
+import hot1 from './assets/photos/hotwheels1.webp';
+import hot2 from './assets/photos/hotwheels2.webp';
+import hot3 from './assets/photos/hotwheels3.webp';
+import hot4 from './assets/photos/hotwheels4.webp';
+
+// Projet 9: Punching ball
+import punch1 from './assets/photos/punchingball2.webp';
+
+// Projet 10: Moto
+import moto1 from './assets/photos/moto1.webp';
+// Projet 11: nounours
+import nounours1 from './assets/photos/nounours1.webp';
+// Projet 12: puce
+import puce1 from './assets/photos/puce1.webp';
+import puce2 from './assets/photos/puce2.webp';
+// Projet 13: traumachinepanneau
+import panneau1 from './assets/photos/traumachine.webp';
+// Projet 14: souris
+import souris from './assets/photos/souris1.webp';
+// Projet 15: enquete
+import enqu1 from './assets/photos/enquete1.webp';
+// Projet 16: yahour
+import yahour1 from './assets/photos/yahourt1.webp';
+// Projet 17: Alien
+import alien1 from './assets/photos/alien1.webp';
 
 // Données des projets - remplace par tes propres images et infos
 const projects = [
@@ -120,7 +155,119 @@ const projects = [
     thumbnail: c1,
     images: [c1, c2, c3, c4, c5, c6, c7, c8],
     description: "Performance view at Ufer Studios (Berlin). Instruments made out of ceramics."
+  },
+
+    {
+    id: 7,
+    title: "Buddha, Frogs and Bad Decisions",
+    year: "2024",
+    dimensions: "Dimensions variables",
+    materials: "Installation, bois, objets trouvés, encens, peinture sur toile",
+    thumbnail: carou1,
+    images: [carou1, carou2, carou3, carou4, carou5],
+    description: "Exhibition view at Espace Vanderboght (Brussels)"
+  },
+  {
+    id: 8,
+    title: "Hotwheels",
+    year: "2024",
+    dimensions: "Format variable",
+    materials: "Céramique, bave",
+    thumbnail: hot1,
+    images: [hot1, hot2, hot3, hot4],
+    description: "vitesse. Exhibition view at Espace Vanderboght (Brussels"
+  },
+  {
+    id: 9,
+    title: "Please Do Hit",
+    year: "2023",
+    dimensions: "60x60x200",
+    materials: "Steel, punching ball, acrylics on wood",
+    thumbnail: punch1,
+    images: [punch1],
+    description: "Exhibition view at Espace Vanderboght (Brussels"
+  },
+  {
+    id: 10,
+    title: "MotoGP",
+    year: "2023",
+    dimensions: "",
+    materials: "Paint on canvas",
+    thumbnail: moto1,
+    images: [moto1],
+    description: ""
+  },
+  {
+    id: 11,
+    title: "Spin Doctor Detector",
+    year: "2023",
+    dimensions: "30 x 20 cm",
+    materials: "Paint on canvas",
+    thumbnail: nounours1,
+    images: [nounours1],
+    description: "."
+  },
+  {
+    id: 12,
+    title: "S on your Chest",
+    year: "2024",
+    dimensions: "",
+    materials: "Paint on canvas",
+    thumbnail: puce1,
+    images: [puce1, puce2],
+    description: ""
+  },
+  {
+    id: 13,
+    title: "Traumachine",
+    year: "2024",
+    dimensions: "200 x 120 cm",
+    materials: "Mixed Media on wood",
+    thumbnail: panneau1,
+    images: [panneau1],
+    description: "."
+  },
+  {
+    id: 14,
+    title: "Work has been good",
+    year: "2023",
+    dimensions: "",
+    materials: "Paint on canvas",
+    thumbnail: souris,
+    images: [souris],
+    description: ""
+  },
+  {
+    id: 15,
+    title: "Une Strange Affaire",
+    year: "2022",
+    dimensions: "",
+    materials: "Paint on canvas",
+    thumbnail: enqu1,
+    images: [enqu1],
+    description: ""
+  },
+  {
+    id: 16,
+    title: "Lactose Free Greek Goghurt",
+    year: "2022",
+    dimensions: "",
+    materials: "Paint on canvas",
+    thumbnail: yahour1,
+    images: [yahour1],
+    description: ""
+  },
+  {
+    id: 17,
+    title: "Mathematics",
+    year: "2021",
+    dimensions: "",
+    materials: "Paint on canvas",
+    thumbnail: alien1,
+    images: [alien1],
+    description: "My first painting ever, i still love it to this day"
   }
+
 ];
 
 
@@ -399,7 +546,7 @@ const playEvilSound = () => {
   </div>
 </nav>
       </header>
-
+        
       {/* Contenu principal */}
       <main className="pt-24 pb-12 max-w-6xl mx-auto px-6">
         {/* Work Section */}
