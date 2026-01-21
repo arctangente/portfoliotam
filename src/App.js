@@ -353,50 +353,51 @@ const playEvilSound = () => {
 
       {/* Header */}
       <header className="fixed top-0 w-full bg-black z-40">
-        <nav className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            
-             <div className="breathing-logo">
-            <img src={logo} alt="Logo" className="h-20 w-20 object-contain" />
-            <h1 
-                className="text-5xl flor-de-ruina tracking-wide cursor-pointer hover:opacity-80 transition-opacity"
-                onClick={() => {
-              playEvilSound(); // Joue le son
-              setShowSplash(true);
-              setActiveSection('work');
-            }}
-              >
-                Tâm Nguyen
-              </h1>
-          </div>
-          </div>
-          <div className="flex gap-8">
-            <button
-              onClick={() => setActiveSection('work')}
-              className={`text-sm basteleur tracking-wider transition-colors ${
-                activeSection === 'work' ? 'text-white' : 'text-gray-500'
-              }`}
-            >
-              WORKS
-            </button>
-            <button
-              onClick={() => setActiveSection('about')}
-              className={`text-sm basteleur tracking-wider transition-colors ${
-                activeSection === 'about' ? 'text-white' : 'text-gray-500'
-              }`}
-            >
-              ABOUT/CV
-            </button>
-            <button
-              onClick={() => setActiveSection('contact')}
-              className={`text-sm basteleur tracking-wider transition-colors ${
-                activeSection === 'contact' ? 'text-white' : 'text-gray-500'
-              }`}
-            >
-              CONTACT
-            </button>
-          </div>
-        </nav>
+        <nav className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center flex-wrap gap-y-6">
+  <div className="flex items-center gap-4">
+    <div className="breathing-logo flex items-center gap-4">
+      <img src={logo} alt="Logo" className="h-20 w-20 object-contain" />
+      <h1 
+        className="text-5xl flor-de-ruina tracking-wide cursor-pointer hover:opacity-80 transition-opacity"
+        onClick={() => {
+          playEvilSound(); 
+          setShowSplash(true);
+          setActiveSection('work');
+        }}
+      >
+        Tâm Nguyen
+      </h1>
+    </div>
+  </div>
+
+  {/* La classe flex-wrap ici permet aux boutons de passer en dessous si l'écran est trop petit */}
+  <div className="flex flex-wrap gap-8">
+    <button
+      onClick={() => setActiveSection('work')}
+      className={`text-sm basteleur tracking-wider transition-colors ${
+        activeSection === 'work' ? 'text-white' : 'text-gray-500'
+      }`}
+    >
+      WORKS
+    </button>
+    <button
+      onClick={() => setActiveSection('about')}
+      className={`text-sm basteleur tracking-wider transition-colors ${
+        activeSection === 'about' ? 'text-white' : 'text-gray-500'
+      }`}
+    >
+      ABOUT/CV
+    </button>
+    <button
+      onClick={() => setActiveSection('contact')}
+      className={`text-sm basteleur tracking-wider transition-colors ${
+        activeSection === 'contact' ? 'text-white' : 'text-gray-500'
+      }`}
+    >
+      CONTACT
+    </button>
+  </div>
+</nav>
       </header>
 
       {/* Contenu principal */}
