@@ -1,132 +1,370 @@
-import React, { useState } from 'react';
-import { X, Mail, Github, Linkedin } from 'lucide-react';
+import { X, Mail, Instagram, Music, Disc3 } from 'lucide-react';
+import logo from './assets/logo.png';
+import wings from './assets/wings.png';
+import moth from './assets/moth.png';
+import chenille from './assets/chenille.png';
+import './index.css';
+import genscoFont from './fonts/Gensco.otf';
+import florRuina from './fonts/FlorDeRuina-Flor.woff2';
+import basteleurReg from './fonts/Basteleur-Bold.woff2';
+import karrikReg from './fonts/Karrik-Regular.woff2';
+import wingSfx from './assets/sounds/heaven.mp3';
+import evilSfx from './assets/sounds/mystere.mp3';
+import maPhoto from './assets/artistpic.png';
+import React, { useEffect, useState } from "react";
+
+// Projet 1: Vengeance
+import v1 from './assets/photos/vengeance1.png';
+import v2 from './assets/photos/vengeance2.png';
+import v3 from './assets/photos/vengeance3.png';
+import v4 from './assets/photos/vengeance4.jpg';
+import v5 from './assets/photos/vengeance5.jpg';
+
+// Projet 2: Amygdala
+import s2 from './assets/photos/sigma2.JPG';
+import s3 from './assets/photos/sigma3.JPG';
+import s4 from './assets/photos/sigma4.JPG';
+import s5 from './assets/photos/sigma5.png';
+import s6 from './assets/photos/sigma6.png';
+import s7 from './assets/photos/sigma7.png';
+import s8 from './assets/photos/sigma8.png';
+import s9 from './assets/photos/sigma9.png';
+
+// Projet 3: Buggin
+import b1 from './assets/photos/buggin1.png';
+import b2 from './assets/photos/buggin2.jpg';
+import b3 from './assets/photos/buggin3.jpg';
+import b4 from './assets/photos/buggin4.JPG';
+import b5 from './assets/photos/buggin5.JPG';
+import b6 from './assets/photos/buggin6.JPG';
+import b7 from './assets/photos/buggin7.JPG';
+import b8 from './assets/photos/buggin8.JPG';
+
+// Projet 4: Dialing
+import d1 from './assets/photos/dialing1.JPG';
+import d2 from './assets/photos/dialing2.JPG';
+
+// Projet 5: Liberty
+import l1 from './assets/photos/liberty1.jpg';
+import l2 from './assets/photos/liberty2.jpg';
+import l3 from './assets/photos/liberty3.jpg';
+
+// Projet 6: Croco
+import c1 from './assets/photos/croco1.png';
+import c2 from './assets/photos/croco2.png';
+import c3 from './assets/photos/croco3.png';
+import c4 from './assets/photos/croco4.png';
+import c5 from './assets/photos/croco5.png';
+import c6 from './assets/photos/croco6.png';
+import c7 from './assets/photos/croco7.png';
+import c8 from './assets/photos/croco8.png';
 
 // Données des projets - remplace par tes propres images et infos
 const projects = [
   {
     id: 1,
-    title: "Projet 1",
-    year: "2024",
-    dimensions: "100 × 150 cm",
-    materials: "Huile sur toile",
-    category: "Peinture",
-    thumbnail: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=1200&q=80",
-      "https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=1200&q=80",
-      "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=1200&q=80"
-    ],
-    description: "Description de ton œuvre"
+    title: "You licked my wounds but all I wanted was vengeance",
+    year: "2025",
+    dimensions: "150 x 150 x 120 cm",
+    materials: "Installation, Glazed stoneware, found objects",
+    thumbnail: v1,
+    images: [v1, v2, v3, v4, v5],
+    description: "Installation view at Einblick, Ausblick (Kiel)"
   },
   {
     id: 2,
-    title: "Projet 2",
-    year: "2024",
+    title: "Amygdala, Epicenter of Fear",
+    year: "2025",
     dimensions: "70 × 100 cm",
-    materials: "Aquarelle sur papier",
-    category: "Illustration",
-    thumbnail: "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=1200&q=80",
-      "https://images.unsplash.com/photo-1549887534-1541e9326642?w=1200&q=80"
-    ],
-    description: "Description de ton œuvre"
+    materials: "Glazed stoneware, steel, glass, sound",
+    thumbnail: s2,
+    images: [s2, s3, s4, s5, s6, s7, s8, s9],
+    description: "Solo Show at ProjektRaum (Kiel), link for the sound : https://soundcloud.com/tangurex/amygdala-epicenter-of-fear"
   },
   {
     id: 3,
-    title: "Projet 3",
-    year: "2023",
-    dimensions: "Digital",
-    materials: "Procreate",
-    category: "Digital",
-    thumbnail: "https://images.unsplash.com/photo-1578926078060-2e883d93e309?w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1578926078060-2e883d93e309?w=1200&q=80"
-    ],
-    description: "Description de ton œuvre"
+    title: "Buggin' Around",
+    year: "2025",
+    dimensions: "Performance, 10 minutes, 4 times",
+    materials: "Bike Helmets, Yoga Balls",
+    thumbnail: b1,
+    images: [b1, b2, b3, b4, b5, b6, b7, b8],
+    description: "Performance played 4 times at Bethanien (Berlin)..."
   },
   {
     id: 4,
-    title: "Projet 4",
+    title: "Dialing back our clocks one or two centuries",
     year: "2024",
-    dimensions: "120 × 80 cm",
-    materials: "Acrylique sur toile",
-    category: "Peinture",
-    thumbnail: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=1200&q=80",
-      "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=1200&q=80"
-    ],
-    description: "Description de ton œuvre"
+    dimensions: "20 x 20 cm",
+    materials: "Glazed Stoneware, found objects",
+    thumbnail: d1,
+    images: [d1, d2],
+    description: "Putting children in jail. Exhibition view at FabrikStrasse (Kiel)"
   },
   {
     id: 5,
-    title: "Projet 5",
-    year: "2023",
-    dimensions: "50 × 70 cm",
-    materials: "Encre et aquarelle",
-    category: "Illustration",
-    thumbnail: "https://images.unsplash.com/photo-1549887534-1541e9326642?w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1549887534-1541e9326642?w=1200&q=80"
-    ],
-    description: "Description de ton œuvre"
+    title: "Liberty my arse",
+    year: "2025",
+    dimensions: "120 x 120 x 300 cm",
+    materials: "Plaster, Found object, rope",
+    thumbnail: l1,
+    images: [l1, l2, l3],
+    description: "Exhibition view at Bethanien..."
   },
   {
     id: 6,
-    title: "Projet 6",
+    title: "The Wise crocodile",
     year: "2024",
-    dimensions: "Digital",
-    materials: "Blender, Photoshop",
-    category: "Digital",
-    thumbnail: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&q=80",
-      "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=1200&q=80",
-      "https://images.unsplash.com/photo-1551732998-9c18e1bb0300?w=1200&q=80"
-    ],
-    description: "Description de ton œuvre"
+    dimensions: "Perfomance, 10 minutes",
+    materials: "Glazed Stoneware",
+    thumbnail: c1,
+    images: [c1, c2, c3, c4, c5, c6, c7, c8],
+    description: "Performance view at Ufer Studios (Berlin). Instruments made out of ceramics."
   }
 ];
 
+
+
 function App() {
+  const [init, setInit] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeSection, setActiveSection] = useState('work');
+  const [showSplash, setShowSplash] = useState(true); 
+  const [showBetterText, setShowBetterText] = useState(false);
+  
+  const handleWingClick = () => {
+    playWingSound(); // Joue le son
+    setShowBetterText(true);
+    setTimeout(() => {
+    setShowBetterText(false);
+  }, 2000); // Disparaît après 2 secondes
+  };
+
+
+  // Effet pour faire disparaître le splash
+  React.useEffect(() => { 
+    if (showSplash) {
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [showSplash]);
+
+  // Fonction pour le son des ailes
+const playWingSound = () => {
+  const audio = new Audio(wingSfx);
+  audio.volume = 0.5; // Ajustez le volume (0.0 à 1.0)
+  audio.play().catch(e => console.log("L'audio n'a pas pu démarrer :", e));
+};
+
+// Fonction pour le son "Evil"
+const playEvilSound = () => {
+  const audio = new Audio(evilSfx);
+  audio.volume = 0.7;
+  audio.play().catch(e => console.log("L'audio n'a pas pu démarrer :", e));
+};
 
   return (
     <div className="min-h-screen bg-black text-white" style={{ fontFamily: "'Inter', sans-serif" }}>
+
+               {/* message qui fait peur */}
+        {showSplash && (
+          <div 
+            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center transition-opacity duration-2000"
+            style={{ 
+              animation: 'fadeOut 2s forwards',
+              opacity: showSplash ? 1 : 0 
+            }}
+          >
+            <h1 className="text-6xl gensco text-red-600">
+              There's a sort of evil out there...
+            </h1>
+          </div>
+        )}
+
+        {/* message qui fait du bien */}
+          {showBetterText && (
+            <div 
+              className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
+              style={{ 
+                animation: 'fadeOut 2s forwards',
+                backgroundColor: 'rgba(0,0,0,0.3)' // Un voile très léger
+              }}
+            >
+              <h1 className="text-4xl gensco text-white text-center px-4 tracking-widest">
+                You just made the world a tiny bit better...
+              </h1>
+            </div>
+          )}
+
+
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+            
         
-        @font-face {
+           @keyframes cocoonOpen {
+    0% { 
+      clip-path: circle(0% at 50% 50%); 
+      background: black; 
+    }
+    100% { 
+      clip-path: circle(150% at 50% 50%); 
+      background: transparent; 
+    }
+  }
+
+  .cocoon-overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 100;
+    /* 0.8s avec une courbe "expo" pour plus de punch */
+    animation: cocoonOpen 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Apparition du contenu : Presque instantanée après l'ouverture */
+  .project-content {
+    /* Le contenu attend seulement 0.2s */
+    animation: fadeInContent 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInContent {
+    from { 
+      opacity: 0; 
+      transform: scale(0.95); 
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+  }
+
+
+
+            @keyframes breathe {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.03); } /* Grossit très légèrement */
+              100% { transform: scale(1); }
+            }
+
+            .breathing-logo {
+              animation: breathe 4s ease-in-out infinite;
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              /* On s'assure que l'animation ne bloque pas le curseur chenille */
+              pointer-events: auto; 
+            }
+
+            .breathing-logo:hover {
+              animation-duration: 1.5s; /* La respiration devient plus rapide (stressée/excitée) */
+            }
+
+
+    
+
+          * {
+            cursor: url(${moth}) 0 0, auto !important;
+            a, 
+            button, 
+            [role="button"], 
+            .cursor-pointer, 
+            .cursor-pointer * { 
+              cursor: url(${chenille}) 16 16, pointer !important;
+            }
+          }
+        
+          @keyframes fadeOut {
+            0% { opacity: 1; }
+            70% { opacity: 1; }
+            100% { opacity: 0; }
+          }
+
+          @font-face {
           font-family: 'Flor de Ruina';
-          src: url('./fonts/FlorDeRuina-Flor.woff2') format('woff2');
+          src: url(${florRuina}) format('woff2');
           font-weight: normal;
           font-style: normal;
         }
         
-        .basteleur {
-          font-family: 'Basteleur', serif;
+        @font-face {
+          font-family: 'Basteleur';
+          src: url(${basteleurReg}) format('woff2');
           font-weight: normal;
+          font-style: normal;
         }
         
-        .flor-de-ruina {
-          font-family: 'Flor de Ruina', serif;
+        @font-face {
+          font-family: 'Karrik';
+          src: url(${karrikReg}) format('woff2');
           font-weight: normal;
+          font-style: normal;
         }
+
+
+
+          @font-face {
+            font-family: 'Gensco';
+            src: url(${genscoFont}) format('opentype');
+            font-weight: normal;
+            font-style: normal;
+          }
+
+          .gensco {
+            font-family: 'Gensco', sans-serif;
+            
+          }
         
-        .avara {
-          font-family: 'Avara', serif;
-          font-weight: normal;
-        }
-      `}</style>
+          .flor-de-ruina {
+            font-family: 'Flor de Ruina', serif;
+            font-weight: normal;
+          }
+        
+          .basteleur {
+            font-family: 'Basteleur', serif;
+            font-weight: normal;
+          }
+        
+
+        
+
+          .karrik {
+            font-family: 'Karrik', sans-serif;
+            font-weight: normal;
+            line-height: 1.4;
+            letter-spacing: 0.02em; /* Un peu d'espace pour la lisibilité */
+          }
+      `}
+      
+      </style>
+
+      <img src={wings} className="tiny-floater img-1" alt="" onClick={handleWingClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }} />
+      <img src={wings} className="tiny-floater img-2" alt="" onClick={handleWingClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }} />
+      <img src={wings} className="tiny-floater img-3" alt="" onClick={handleWingClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }} />
+      <img src={wings} className="tiny-floater img-4" alt="" onClick={handleWingClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }} />
+        
+    
 
       {/* Header */}
-      <header className="fixed top-0 w-full bg-black border-b border-gray-800 z-40">
+      <header className="fixed top-0 w-full bg-black z-40">
         <nav className="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
           <div className="flex items-center gap-4">
-            <img src="/test.png" alt="test" className="h-12 w-12 object-contain" />
-            <h1 className="text-5xl flor-de-ruina tracking-wide">TON NOM</h1>
+            
+             <div className="breathing-logo">
+            <img src={logo} alt="Logo" className="h-20 w-20 object-contain" />
+            <h1 
+                className="text-5xl flor-de-ruina tracking-wide cursor-pointer hover:opacity-80 transition-opacity"
+                onClick={() => {
+              playEvilSound(); // Joue le son
+              setShowSplash(true);
+              setActiveSection('work');
+            }}
+              >
+                Tâm Nguyen
+              </h1>
+          </div>
           </div>
           <div className="flex gap-8">
             <button
@@ -135,7 +373,7 @@ function App() {
                 activeSection === 'work' ? 'text-white' : 'text-gray-500'
               }`}
             >
-              TRAVAUX
+              WORKS
             </button>
             <button
               onClick={() => setActiveSection('about')}
@@ -143,7 +381,7 @@ function App() {
                 activeSection === 'about' ? 'text-white' : 'text-gray-500'
               }`}
             >
-              À PROPOS
+              ABOUT/CV
             </button>
             <button
               onClick={() => setActiveSection('contact')}
@@ -157,92 +395,249 @@ function App() {
         </nav>
       </header>
 
-      {/* Main Content */}
+      {/* Contenu principal */}
       <main className="pt-24 pb-12 max-w-6xl mx-auto px-6">
         {/* Work Section */}
-        {activeSection === 'work' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                onClick={() => setSelectedProject(project)}
-                className="cursor-pointer group"
-              >
-                <div className="aspect-square overflow-hidden bg-gray-900 mb-3">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:opacity-80"
-                  />
-                </div>
-                <h3 className="text-sm avara tracking-wide">{project.title}</h3>
-                <p className="text-xs text-gray-500 mt-1">{project.category}</p>
-              </div>
-            ))}
+       {activeSection === 'work' && (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 animate-in fade-in duration-700">
+    {projects.map((project) => (
+      <div 
+        key={project.id} 
+        className="group cursor-pointer"
+        onClick={() => setSelectedProject(project)}
+      >
+        {/* Conteneur Image sans filtre grayscale */}
+        <div className="relative overflow-hidden border border-white/10 bg-zinc-900 aspect-[4/5]">
+          <img 
+            src={project.thumbnail} 
+            alt={project.title}
+            className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+            /* On s'assure qu'il n'y a aucun filtre ici */
+            style={{ filter: 'none' }}
+          />
+        </div>
+
+        {/* Infos sous l'image */}
+        <div className="mt-4 space-y-1">
+          <div className="flex justify-between items-baseline">
+            <h3 className="karrik text-lg text-white group-hover:text-red-600 transition-colors">
+              {project.title}
+            </h3>
+            <span className="basteleur text-xs text-gray-500">{project.year}</span>
           </div>
-        )}
+          <p className="karrik text-xs text-gray-500 uppercase tracking-widest opacity-60">
+            {project.materials}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+)}
+
+
+
+
+
 
         {/* About Section */}
         {activeSection === 'about' && (
-          <div className="max-w-2xl mx-auto py-12">
-            <h2 className="text-5xl basteleur mb-8">À propos</h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed font-light">
-              <p>
-                Je suis un artiste basé à [Ta ville], spécialisé en [ton domaine]. 
-                Mon travail explore [tes thèmes principaux].
-              </p>
-              <p>
-                Diplômé de [ton parcours], j'ai exposé dans [lieux/événements]. 
-                Mon approche artistique se concentre sur [ta démarche].
-              </p>
-              <p>
-                Disponible pour des commissions et collaborations.
-              </p>
-            </div>
-          </div>
-        )}
+  <main className="max-w-6xl mx-auto pt-32 pb-20 px-6 grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-16 animate-in fade-in duration-1000 relative z-10">
+    
+    {/* --- COLONNE GAUCHE : FIXED (Statement & Bio) --- */}
+    <div className="md:sticky md:top-32 h-fit space-y-8">
+      
+      {/* Bio / About rapide - Taille réduite */}
+      <div className="karrik space-y-1 text-gray-400 text-base">
+        <p><span className="text-white">Tâm Nguyen</span> 1997, Banlieue Parisienne</p>
+        <p>il/lui</p>
+        <p>Artiste Français - Vietnamien</p>
+        <p>Vit et travaille à Bruxelles (BE)</p>
+      </div>
 
-        {/* Contact Section */}
-        {activeSection === 'contact' && (
-          <div className="max-w-2xl mx-auto py-12">
-            <h2 className="text-5xl basteleur mb-8">Contact</h2>
-            <div className="space-y-6">
-              <p className="text-gray-300 font-light">
-                N'hésite pas à me contacter pour toute question, commission ou collaboration.
-              </p>
-              <div className="flex gap-6 pt-4">
-                <a
-                  href="mailto:ton@email.com"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                >
-                  <Mail size={20} />
-                  <span className="text-sm">ton@email.com</span>
-                </a>
-                <a
-                  href="https://github.com/tonusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                >
-                  <Github size={20} />
-                  <span className="text-sm">GitHub</span>
-                </a>
-                <a
-                  href="https://linkedin.com/in/tonusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
-                >
-                  <Linkedin size={20} />
-                  <span className="text-sm">LinkedIn</span>
-                </a>
-              </div>
+      {/* Texte de Statement - Taille de police ajustée */}
+      <div className="space-y-6">
+        <h2 className="text-4xl basteleur uppercase tracking-tighter">Statement</h2>
+        <div className="space-y-4 text-gray-300 leading-relaxed karrik text-base">
+          <p>
+            Mon travail se base sur le sentiment d’aliénation que je ressens : au travail, face à la surcharge informationnelle, face à la norme sociale. Ce malaise, je pouvais l’apaiser en ligne, m’y évader. Autrefois terre de rêves, d’émancipation, de connexions, Internet a changé. Ce qui me semblait être un espace de possibilités infinies semble désormais étouffant, dépouillé de sa magie.
+          </p>
+          <p>
+            Quel monstre a tué cette excitation ? Quel fantôme persiste, se nourrit de nos pensées, nécrose nos expériences, empêche notre émerveillement ? Quelles sont ses armes ?
+          </p>
+          <p>
+            Mon esprit s’est engourdi. Dès lors, une question centrale se pose : comment sortir de cet état d’annihilation émotionnelle et physique ? Si l’espoir de reprendre la maîtrise de la situation me semble légitime, il paraît parfois illusoire ou vain.
+          </p>
+          <p>
+            Ainsi, je suis déjà nostalgique d’un avenir, comme s’il était déjà perdu… Comme s’il était déjà trop tard ? C’est à travers ces questionnements que je confronte le spectre du technocapitalisme, un rouage qui ronge nos mondes, les dévore de l’intérieur.
+          </p>
+          <p>
+            J’enclenche ainsi pour me défendre une pratique basée sur le jeu, l’absurde, le grotesque ; pratique protéiforme qui passe par la peinture, la sculpture, la performance…
+          </p>
+          <p>
+            L’idée d’un monde chaotique composite me plaît beaucoup : un monde où les corps sont distordus, hybrides, les objets ambigus ; où les rituels sont foireux, détournés. Je jongle avec tout cela en essayant de créer une tension drôle entre le jeu et le malaise.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* --- COLONNE DROITE : SCROLLABLE (Exhibitions & Education) --- */}
+    <div className="space-y-12">
+      
+      {/* SECTION EXHIBITIONS - Condensée */}
+      <section>
+        <h2 className="text-2xl basteleur mb-6 uppercase tracking-tighter text-white/90">Exhibitions</h2>
+        <div className="karrik space-y-3 text-sm">
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
+            <span className="basteleur text-red-600 text-base">2026</span>
+            <div className="border-l border-red-900/30 pl-4">
+              <p>Future matters, <span className="opacity-40 italic text-xs">EDJI Gallery, Brussels</span></p>
             </div>
           </div>
-        )}
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline pt-1">
+            <span className="basteleur text-gray-500 text-base">2025</span>
+            <div className="border-l border-gray-800 pl-4 space-y-1">
+              <p>I’ll see you in my dreams, <span className="opacity-40 italic text-xs">Botanique Galerie + Serres, Brussels</span></p>
+              <p>Einblick, Ausblick, <span className="opacity-40 italic text-xs">Muthesius Kunsthochschule, Kiel</span></p>
+              <p>Monstrumz, <span className="opacity-40 italic text-xs">Künstlerhaus Bethanien, Berlin</span></p>
+              <p>Wolfstöne, Dissonanzen und Geräusche, <span className="opacity-40 italic text-xs">Uferstudios, Berlin</span></p>
+              <p>Zwei Einheiten, <span className="opacity-40 italic text-xs">FabrikStrasse, Kiel</span></p>
+              <p>Amygdala, epicenter of fear, <span className="opacity-40 italic text-xs">ProjektRaum, Kiel</span></p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline pt-1">
+            <span className="basteleur text-gray-500 text-base">2024</span>
+            <div className="border-l border-gray-800 pl-4 space-y-1">
+              <p>Bachelor Diplomas Jurys, <span className="opacity-40 italic text-xs">Espace Vanderboght, Brussels</span></p>
+              <p>Icy Patch, <span className="opacity-40 italic text-xs">L’imprimerie, Brussels</span></p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline pt-1">
+            <span className="basteleur text-gray-500 text-base">2022</span>
+            <div className="border-l border-gray-800 pl-4 space-y-1">
+              <p>Open Jurys, <span className="opacity-40 italic text-xs">ERG un lieu de recherche, Brussels</span></p>
+              <p>Meme Meme, <span className="opacity-40 italic text-xs">Jacques Frank, Brussels</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION EDUCATION - Condensée */}
+      <section>
+        <h2 className="text-2xl basteleur mb-6 uppercase tracking-tighter text-white/90">Education</h2>
+        <div className="karrik space-y-2 text-sm">
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
+            <span className="basteleur text-red-600 text-[10px] uppercase">Now</span>
+            <div className="border-l border-red-900/30 pl-4">
+              <p>MFA. Fine Art, <span className="opacity-40 italic text-xs">Royal Academy of Fine Art Brussels</span></p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
+            <span className="basteleur text-gray-500 text-[10px]">24—25</span>
+            <div className="border-l border-gray-800 pl-4">
+              <p>Fine Art, <span className="opacity-40 italic text-xs">Muthesius Kunsthochschule</span></p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
+            <span className="basteleur text-gray-500 text-[10px]">22—24</span>
+            <div className="border-l border-gray-800 pl-4">
+              <p>Fine Art, <span className="opacity-40 italic text-xs">Royal Academy of Fine Art Brussels</span></p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
+            <span className="basteleur text-gray-500 text-[10px]">21—22</span>
+            <div className="border-l border-gray-800 pl-4">
+              <p>Fine Art, <span className="opacity-40 italic text-xs">Ecole de Recherche Graphique, Brussels</span></p>
+            </div>
+          </div>
+          <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
+            <span className="basteleur text-gray-500 text-[10px]">14—19</span>
+            <div className="border-l border-gray-800 pl-4">
+              <p>MSC. Computer Engineering, <span className="opacity-40 italic text-xs">Université de Technologie de Troyes</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+)}
+
+
+
+
+
+
+{/* Contact Section */}
+{activeSection === 'contact' && (
+  <div className="max-w-2xl mx-auto py-12 animate-in fade-in duration-700">
+    {/* Titre aligné comme dans About */}
+    <h2 className="text-5xl basteleur mb-8">Contact</h2>
+    
+    <div className="space-y-8">
+      {/* IMAGE CENTRÉE - Structure identique à un bloc de texte About */}
+      <div className="w-full py-4"> 
+        <div className="relative group mx-auto">
+          {/* L'effet de halo rouge */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-red-900 to-black rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+          
+          <img 
+            src={maPhoto} 
+            alt="Tâm Nguyen" 
+            className="relative rounded-lg grayscale hover:grayscale-0 transition-all duration-700 w-full h-auto object-cover border border-gray-800 shadow-xl"
+          />
+        </div>
+      </div>
+
+      {/* TEXTE Karrik */}
+      <p className="text-lg text-gray-300 karrik leading-relaxed">
+        Please contact me for any inquiries on my email. The link for any sound piece is in my soundcloud. I also play in a band with Alexe Françoise, called Silicon Balais. This is not a side project and is a musical translation of our artistic thoughts, the bandcamp link is also under there. Thank you for visiting this website.
+      </p>
+
+      {/* LIENS Sociaux */}
+      <div className="flex flex-wrap gap-x-8 gap-y-4 pt-4">
+        <a
+          href="mailto:ngutam91@gmail.com"
+          className="flex items-center gap-2 text-gray-300 hover:text-white transition-all"
+        >
+          <Mail size={18} />
+          <span className="text-sm karrik tracking-widest uppercase">ngutam91@gmail.com</span>
+        </a>
+
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-300 hover:text-white transition-all"
+        >
+          <Instagram size={18} />
+          <span className="text-sm karrik tracking-widest uppercase">@tangurex</span>
+        </a>
+
+        <a
+          href="https://soundcloud.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-300 hover:text-white transition-all"
+        >
+          <Music size={18} />
+          <span className="text-sm karrik tracking-widest uppercase">SoundCloud</span>
+        </a>
+
+        <a
+          href="https://siliconbalais.bandcamp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-300 hover:text-white transition-all"
+        >
+          <Disc3 size={18} />
+          <span className="text-sm karrik tracking-widest uppercase">Bandcamp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+)}
       </main>
 
-      {/* Lightbox */}
+      {/* Lightbox - Page complète qui scroll */}
       {selectedProject && (
         <div
           className="fixed inset-0 bg-black z-50 overflow-y-auto"
@@ -257,9 +652,9 @@ function App() {
           
           <div className="min-h-screen py-12 px-6" onClick={(e) => e.stopPropagation()}>
             <div className="max-w-4xl mx-auto">
-              {/* Informations du projet */}
+              {/* Informations du projet EN HAUT */}
               <div className="mb-12 pb-8 border-b border-gray-800">
-                <h2 className="text-4xl avara mb-4">{selectedProject.title}</h2>
+                <h2 className="text-4xl karrik mb-4">{selectedProject.title}</h2>
                 <div className="space-y-1 text-gray-400 text-sm">
                   <p>{selectedProject.year}</p>
                   <p>{selectedProject.dimensions}</p>
@@ -272,7 +667,7 @@ function App() {
                 )}
               </div>
 
-              {/* Images du projet */}
+              {/* Images empilées verticalement */}
               <div className="space-y-8">
                 {selectedProject.images.map((image, index) => (
                   <div key={index} className="w-full">
@@ -289,12 +684,94 @@ function App() {
         </div>
       )}
 
-      {/* Footer */}
-      <footer className="border-t border-gray-800 py-8">
-        <div className="max-w-6xl mx-auto px-6 text-center text-xs text-gray-500">
-          © 2025 Ton Nom. Tous droits réservés.
+      
+
+      {/* Footer avec Crédits Typos */}
+      <footer className="mt-20 py-10 border-t border-gray-900 bg-black">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-end gap-6">
+          
+          {/* Section gauche : Crédits */}
+          <div className="flex flex-col gap-2">
+            <h3 className="basteleur text-xs text-gray-500 uppercase tracking-widest mb-2">Typography Credits</h3>
+            <ul className="text-[10px] space-y-1 text-gray-600 karrik uppercase tracking-tighter">
+              <li><span className="text-gray-400">Flor de Ruina</span> — by Flor de Ruina</li>
+              <li><span className="text-gray-400">Gensco</span> — by OpenType</li>
+              <li><span className="text-gray-400">Basteleur</span> — by Keissel & Velvetyne</li>
+              <li><span className="text-gray-400">Karrik</span> — by Jean-Baptiste Morizot</li>
+            </ul>
+          </div>
+
+          {/* Section droite : Copyright ou info supplémentaire */}
+          <div className="text-[10px] text-gray-700 basteleur uppercase tracking-[0.2em]">
+            © {new Date().getFullYear()} Tâm Nguyen - Ceci est un site codé par moi même
+          </div>
         </div>
       </footer>
+
+
+
+      {/* Vue détaillée (Cocon) */}
+{selectedProject && (
+  <div className="fixed inset-0 z-[100] bg-black overflow-y-auto">
+    {/* L'effet de tissage */}
+    <div className="cocoon-overlay pointer-events-none"></div>
+
+    <div className="project-content max-w-6xl mx-auto px-6 py-24 min-h-screen">
+      {/* Bouton Fermer */}
+      <button 
+        onClick={() => setSelectedProject(null)}
+        className="fixed top-8 right-8 z-[110] text-white hover:text-red-600 transition-colors"
+      >
+        <X size={40} />
+      </button>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        {/* Images du projet */}
+        <div className="space-y-8">
+  {selectedProject.images.map((img, index) => (
+    <img 
+      key={index} 
+      src={img} 
+      className="w-full border border-white/5 transition-transform duration-1000" 
+      alt="" 
+      style={{ filter: 'none' }} // On s'assure que c'est bien en couleur ici aussi
+    />
+  ))}
+</div>
+
+        {/* Infos du projet */}
+        <div className="md:sticky md:top-24 h-fit space-y-8">
+          <div className="space-y-2">
+            <h2 className="text-5xl basteleur leading-tight">{selectedProject.title}</h2>
+            <p className="karrik text-xl text-red-600">{selectedProject.year}</p>
+          </div>
+
+          <div className="karrik space-y-6 text-gray-300 text-lg leading-relaxed">
+            <div className="flex flex-col gap-1 border-l border-gray-800 pl-6 text-sm uppercase tracking-widest text-gray-500">
+              <span>{selectedProject.materials}</span>
+              <span>{selectedProject.dimensions}</span>
+            </div>
+            <p>{selectedProject.description}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  </div>
+)}
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   );
 }
