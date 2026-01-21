@@ -14,50 +14,50 @@ import maPhoto from './assets/artistpic.png';
 import React, { useEffect, useState } from "react";
 
 // Projet 1: Vengeance
-import v1 from './assets/photos/vengeance1.png';
-import v2 from './assets/photos/vengeance2.png';
-import v3 from './assets/photos/vengeance3.png';
-import v4 from './assets/photos/vengeance4.jpg';
-import v5 from './assets/photos/vengeance5.jpg';
+import v1 from './assets/photos/vengeance1.webp';
+import v2 from './assets/photos/vengeance2.webp';
+import v3 from './assets/photos/vengeance3.webp';
+import v4 from './assets/photos/vengeance4.webp';
+import v5 from './assets/photos/vengeance5.webp';
 
 // Projet 2: Amygdala
-import s2 from './assets/photos/sigma2.JPG';
-import s3 from './assets/photos/sigma3.JPG';
-import s4 from './assets/photos/sigma4.JPG';
-import s5 from './assets/photos/sigma5.png';
-import s6 from './assets/photos/sigma6.png';
-import s7 from './assets/photos/sigma7.png';
-import s8 from './assets/photos/sigma8.png';
-import s9 from './assets/photos/sigma9.png';
+import s2 from './assets/photos/sigma2.webp';
+import s3 from './assets/photos/sigma3.webp';
+import s4 from './assets/photos/sigma4.webp';
+import s5 from './assets/photos/sigma5.webp';
+import s6 from './assets/photos/sigma6.webp';
+import s7 from './assets/photos/sigma7.webp';
+import s8 from './assets/photos/sigma8.webp';
+import s9 from './assets/photos/sigma9.webp';
 
 // Projet 3: Buggin
-import b1 from './assets/photos/buggin1.png';
-import b2 from './assets/photos/buggin2.jpg';
-import b3 from './assets/photos/buggin3.jpg';
-import b4 from './assets/photos/buggin4.JPG';
-import b5 from './assets/photos/buggin5.JPG';
-import b6 from './assets/photos/buggin6.JPG';
-import b7 from './assets/photos/buggin7.JPG';
-import b8 from './assets/photos/buggin8.JPG';
+import b1 from './assets/photos/buggin1.webp';
+import b2 from './assets/photos/buggin2.webp';
+import b3 from './assets/photos/buggin3.webp';
+import b4 from './assets/photos/buggin4.webp';
+import b5 from './assets/photos/buggin5.webp';
+import b6 from './assets/photos/buggin6.webp';
+import b7 from './assets/photos/buggin7.webp';
+import b8 from './assets/photos/buggin8.webp';
 
 // Projet 4: Dialing
-import d1 from './assets/photos/dialing1.JPG';
-import d2 from './assets/photos/dialing2.JPG';
+import d1 from './assets/photos/dialing1.webp';
+import d2 from './assets/photos/dialing2.webp';
 
 // Projet 5: Liberty
-import l1 from './assets/photos/liberty1.jpg';
-import l2 from './assets/photos/liberty2.jpg';
-import l3 from './assets/photos/liberty3.jpg';
+import l1 from './assets/photos/liberty1.webp';
+import l2 from './assets/photos/liberty2.webp';
+import l3 from './assets/photos/liberty3.webp';
 
 // Projet 6: Croco
-import c1 from './assets/photos/croco1.png';
-import c2 from './assets/photos/croco2.png';
-import c3 from './assets/photos/croco3.png';
-import c4 from './assets/photos/croco4.png';
-import c5 from './assets/photos/croco5.png';
-import c6 from './assets/photos/croco6.png';
-import c7 from './assets/photos/croco7.png';
-import c8 from './assets/photos/croco8.png';
+import c1 from './assets/photos/croco1.webp';
+import c2 from './assets/photos/croco2.webp';
+import c3 from './assets/photos/croco3.webp';
+import c4 from './assets/photos/croco4.webp';
+import c5 from './assets/photos/croco5.webp';
+import c6 from './assets/photos/croco6.webp';
+import c7 from './assets/photos/croco7.webp';
+import c8 from './assets/photos/croco8.webp';
 
 // Données des projets - remplace par tes propres images et infos
 const projects = [
@@ -132,6 +132,7 @@ function App() {
   const [showSplash, setShowSplash] = useState(true); 
   const [showBetterText, setShowBetterText] = useState(false);
   
+  // Pour le texte quand tu cliques sur les anges
   const handleWingClick = () => {
     playWingSound(); // Joue le son
     setShowBetterText(true);
@@ -151,14 +152,14 @@ function App() {
     }
   }, [showSplash]);
 
-  // Fonction pour le son des ailes
+  // Pour jouer le son des anges
 const playWingSound = () => {
   const audio = new Audio(wingSfx);
   audio.volume = 0.5; // Ajustez le volume (0.0 à 1.0)
   audio.play().catch(e => console.log("L'audio n'a pas pu démarrer :", e));
 };
 
-// Fonction pour le son "Evil"
+// Pour jouer le son démon
 const playEvilSound = () => {
   const audio = new Audio(evilSfx);
   audio.volume = 0.7;
@@ -168,7 +169,7 @@ const playEvilSound = () => {
   return (
     <div className="min-h-screen bg-black text-white" style={{ fontFamily: "'Inter', sans-serif" }}>
 
-               {/* message qui fait peur */}
+               {/* message flippant */}
         {showSplash && (
           <div 
             className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center transition-opacity duration-2000"
@@ -183,7 +184,7 @@ const playEvilSound = () => {
           </div>
         )}
 
-        {/* message qui fait du bien */}
+        {/* message cool */}
           {showBetterText && (
             <div 
               className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
@@ -200,46 +201,47 @@ const playEvilSound = () => {
 
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
-            
-        
-           @keyframes cocoonOpen {
-    0% { 
-      clip-path: circle(0% at 50% 50%); 
-      background: black; 
-    }
-    100% { 
-      clip-path: circle(150% at 50% 50%); 
-      background: transparent; 
-    }
-  }
+    
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+                        
+                    
+                      @keyframes cocoonOpen {
+                0% { 
+                  clip-path: circle(0% at 50% 50%); 
+                  background: black; 
+                }
+                100% { 
+                  clip-path: circle(150% at 50% 50%); 
+                  background: transparent; 
+                }
+              }
 
-  .cocoon-overlay {
-    position: fixed;
-    inset: 0;
-    background: black;
-    z-index: 100;
-    /* 0.8s avec une courbe "expo" pour plus de punch */
-    animation: cocoonOpen 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
+              .cocoon-overlay {
+                position: fixed;
+                inset: 0;
+                background: black;
+                z-index: 100;
+                /* 0.8s avec une courbe "expo" pour plus de punch */
+                animation: cocoonOpen 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+              }
 
-  /* Apparition du contenu : Presque instantanée après l'ouverture */
-  .project-content {
-    /* Le contenu attend seulement 0.2s */
-    animation: fadeInContent 0.6s ease-out 0.2s forwards;
-    opacity: 0;
-  }
+              /* Apparition du contenu : Presque instantanée après l'ouverture */
+              .project-content {
+                /* Le contenu attend seulement 0.2s */
+                animation: fadeInContent 0.6s ease-out 0.2s forwards;
+                opacity: 0;
+              }
 
-  @keyframes fadeInContent {
-    from { 
-      opacity: 0; 
-      transform: scale(0.95); 
-    }
-    to { 
-      opacity: 1; 
-      transform: scale(1); 
-    }
-  }
+              @keyframes fadeInContent {
+                from { 
+                  opacity: 0; 
+                  transform: scale(0.95); 
+                }
+                to { 
+                  opacity: 1; 
+                  transform: scale(1); 
+                }
+              }
 
 
 
@@ -281,6 +283,8 @@ const playEvilSound = () => {
             70% { opacity: 1; }
             100% { opacity: 0; }
           }
+
+          
 
           @font-face {
           font-family: 'Flor de Ruina';
@@ -328,8 +332,6 @@ const playEvilSound = () => {
           }
         
 
-        
-
           .karrik {
             font-family: 'Karrik', sans-serif;
             font-weight: normal;
@@ -340,6 +342,8 @@ const playEvilSound = () => {
       
       </style>
 
+
+      {/* les anges */}   
       <img src={wings} className="tiny-floater img-1" alt="" onClick={handleWingClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }} />
       <img src={wings} className="tiny-floater img-2" alt="" onClick={handleWingClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }} />
       <img src={wings} className="tiny-floater img-3" alt="" onClick={handleWingClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }} />
@@ -406,13 +410,11 @@ const playEvilSound = () => {
         className="group cursor-pointer"
         onClick={() => setSelectedProject(project)}
       >
-        {/* Conteneur Image sans filtre grayscale */}
         <div className="relative overflow-hidden border border-white/10 bg-zinc-900 aspect-[4/5]">
           <img 
             src={project.thumbnail} 
             alt={project.title}
             className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
-            /* On s'assure qu'il n'y a aucun filtre ici */
             style={{ filter: 'none' }}
           />
         </div>
@@ -443,10 +445,10 @@ const playEvilSound = () => {
         {activeSection === 'about' && (
   <main className="max-w-6xl mx-auto pt-32 pb-20 px-6 grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-16 animate-in fade-in duration-1000 relative z-10">
     
-    {/* --- COLONNE GAUCHE : FIXED (Statement & Bio) --- */}
+    {/* COLONNE GAUCHE : Statement & Bio*/}
     <div className="md:sticky md:top-32 h-fit space-y-8">
       
-      {/* Bio / About rapide - Taille réduite */}
+      {/* Bio / About  */}
       <div className="karrik space-y-1 text-gray-400 text-base">
         <p><span className="text-white">Tâm Nguyen</span> 1997, Banlieue Parisienne</p>
         <p>il/lui</p>
@@ -480,10 +482,10 @@ const playEvilSound = () => {
       </div>
     </div>
 
-    {/* --- COLONNE DROITE : SCROLLABLE (Exhibitions & Education) --- */}
+    {/*  (Exhibitions & Education) --- */}
     <div className="space-y-12">
       
-      {/* SECTION EXHIBITIONS - Condensée */}
+      {/* SECTION EXHIBITIONS  */}
       <section>
         <h2 className="text-2xl basteleur mb-6 uppercase tracking-tighter text-white/90">Exhibitions</h2>
         <div className="karrik space-y-3 text-sm">
@@ -521,7 +523,7 @@ const playEvilSound = () => {
         </div>
       </section>
 
-      {/* SECTION EDUCATION - Condensée */}
+      {/* SECTION EDUCATION */}
       <section>
         <h2 className="text-2xl basteleur mb-6 uppercase tracking-tighter text-white/90">Education</h2>
         <div className="karrik space-y-2 text-sm">
@@ -569,11 +571,11 @@ const playEvilSound = () => {
 {/* Contact Section */}
 {activeSection === 'contact' && (
   <div className="max-w-2xl mx-auto py-12 animate-in fade-in duration-700">
-    {/* Titre aligné comme dans About */}
+
     <h2 className="text-5xl basteleur mb-8">Contact</h2>
     
     <div className="space-y-8">
-      {/* IMAGE CENTRÉE - Structure identique à un bloc de texte About */}
+
       <div className="w-full py-4"> 
         <div className="relative group mx-auto">
           {/* L'effet de halo rouge */}
