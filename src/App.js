@@ -101,37 +101,37 @@ const projects = [
     title: "You licked my wounds but all I wanted was vengeance",
     year: "2025",
     dimensions: "150 x 150 x 120 cm",
-    materials: "Installation, Glazed stoneware, found objects",
+    materials: "Installation - Glazed stoneware, found objects",
     thumbnail: v1,
     images: [v1, v2, v3, v4, v5],
-    description: "Installation view at Einblick, Ausblick (Kiel)"
+    description: "Installation view at Einblick, Ausblick (Kiel). One piece fountain spitting wine."
   },
   {
     id: 2,
     title: "Amygdala, Epicenter of Fear",
     year: "2025",
     dimensions: "70 × 100 cm",
-    materials: "Glazed stoneware, steel, glass, sound",
+    materials: "Installation - Glazed stoneware, steel, glass, sound",
     thumbnail: s2,
     images: [s2, s3, s4, s5, s6, s7, s8, s9],
-    description: "Solo Show at ProjektRaum (Kiel), link for the sound : https://soundcloud.com/tangurex/amygdala-epicenter-of-fear"
+    description: "Solo Show at ProjektRaum (Kiel), link for the sound : https://soundcloud.com/tangurex/amygdala-epicenter-of-fear. The installation is comprised of the centerpiece, Sigma, Alpha, Beta, five wall ceramics, and a sound piece, made in the room after installing everything."
   },
   {
     id: 3,
     title: "Buggin' Around",
     year: "2025",
     dimensions: "Performance, 10 minutes, 4 times",
-    materials: "Bike Helmets, Yoga Balls",
+    materials: "Performance - Bike Helmets, Yoga Balls",
     thumbnail: b1,
     images: [b1, b2, b3, b4, b5, b6, b7, b8],
-    description: "Performance played 4 times at Bethanien (Berlin)..."
+    description: "Performance played 4 times at Kunstlerhaus Bethanien (Berlin). Performed, written by Marie Borgerding, Lara Meise, Tâm Nguyen, Ruth Pick. Dung beetles bike helmet made by me with the help of Ruth."
   },
   {
     id: 4,
     title: "Dialing back our clocks one or two centuries",
     year: "2024",
     dimensions: "20 x 20 cm",
-    materials: "Glazed Stoneware, found objects",
+    materials: "Sculpture - Glazed Stoneware, found objects",
     thumbnail: d1,
     images: [d1, d2],
     description: "Putting children in jail. Exhibition view at FabrikStrasse (Kiel)"
@@ -141,27 +141,27 @@ const projects = [
     title: "Liberty my arse",
     year: "2025",
     dimensions: "120 x 120 x 300 cm",
-    materials: "Plaster, Found object, rope",
+    materials: "Installation - Plaster, Found object, rope",
     thumbnail: l1,
     images: [l1, l2, l3],
-    description: "Exhibition view at Bethanien..."
+    description: "Exhibition view at Kunstlerhaus Bethanien (Berlin). The statue of liberty head was bondaged in a classic shibari knot by Mr Red Donkey."
   },
   {
     id: 6,
     title: "The Wise crocodile",
     year: "2024",
-    dimensions: "Perfomance, 10 minutes",
-    materials: "Glazed Stoneware",
+    dimensions: "Performance, 10 minutes",
+    materials: "Performance - Glazed Stoneware",
     thumbnail: c1,
     images: [c1, c2, c3, c4, c5, c6, c7, c8],
-    description: "Performance view at Ufer Studios (Berlin). Instruments made out of ceramics."
+    description: "Performance view at Ufer Studios (Berlin). Quiet symphony played out instruments made out of ceramics."
   },
 
     {
     id: 7,
     title: "Buddha, Frogs and Bad Decisions",
     year: "2024",
-    dimensions: "Dimensions variables",
+    dimensions: "180x80x200",
     materials: "Installation, bois, objets trouvés, encens, peinture sur toile",
     thumbnail: carou1,
     images: [carou1, carou2, carou3, carou4, carou5],
@@ -171,21 +171,21 @@ const projects = [
     id: 8,
     title: "Hotwheels",
     year: "2024",
-    dimensions: "Format variable",
-    materials: "Céramique, bave",
+    dimensions: "Installation - Format variable",
+    materials: "Céramique, bave, pièces",
     thumbnail: hot1,
     images: [hot1, hot2, hot3, hot4],
-    description: "vitesse. Exhibition view at Espace Vanderboght (Brussels"
+    description: "vitesse. Exhibition view at Espace Vanderboght (Brussels)"
   },
   {
     id: 9,
     title: "Please Do Hit",
     year: "2023",
     dimensions: "60x60x200",
-    materials: "Steel, punching ball, acrylics on wood",
+    materials: "Sculpture - Steel, punching ball, acrylics on wood",
     thumbnail: punch1,
     images: [punch1],
-    description: "Exhibition view at Espace Vanderboght (Brussels"
+    description: "Exhibition view at Espace Vanderboght (Brussels)"
   },
   {
     id: 10,
@@ -598,7 +598,8 @@ const playEvilSound = () => {
       
       {/* Bio / About  */}
       <div className="karrik space-y-1 text-gray-400 text-base">
-        <p><span className="text-white">Tâm Nguyen</span> 1997, Banlieue Parisienne</p>
+        <p></p>
+        <p><span className="text-white">Tâm Nguyen</span> 1997</p>
         <p>il/lui</p>
         <p>Artiste Français - Vietnamien</p>
         <p>Vit et travaille à Bruxelles (BE)</p>
@@ -678,25 +679,25 @@ const playEvilSound = () => {
           <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
             <span className="basteleur text-red-600 text-[10px] uppercase">Now</span>
             <div className="border-l border-red-900/30 pl-4">
-              <p>MFA. Fine Art, <span className="opacity-40 italic text-xs">Royal Academy of Fine Art Brussels</span></p>
+              <p>MFA. Fine Art, <span className="opacity-40 italic text-xs">Royal Academy of Fine Art, Brussels</span></p>
             </div>
           </div>
           <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
             <span className="basteleur text-gray-500 text-[10px]">24—25</span>
             <div className="border-l border-gray-800 pl-4">
-              <p>Fine Art, <span className="opacity-40 italic text-xs">Muthesius Kunsthochschule</span></p>
+              <p>MFA. Fine Art, <span className="opacity-40 italic text-xs">Muthesius Kunsthochschule, Kiel</span></p>
             </div>
           </div>
           <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
             <span className="basteleur text-gray-500 text-[10px]">22—24</span>
             <div className="border-l border-gray-800 pl-4">
-              <p>Fine Art, <span className="opacity-40 italic text-xs">Royal Academy of Fine Art Brussels</span></p>
+              <p>BA. Fine Art, <span className="opacity-40 italic text-xs">Royal Academy of Fine Art, Brussels</span></p>
             </div>
           </div>
           <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
             <span className="basteleur text-gray-500 text-[10px]">21—22</span>
             <div className="border-l border-gray-800 pl-4">
-              <p>Fine Art, <span className="opacity-40 italic text-xs">Ecole de Recherche Graphique, Brussels</span></p>
+              <p>BA. Fine Art, <span className="opacity-40 italic text-xs">Ecole de Recherche Graphique, Brussels</span></p>
             </div>
           </div>
           <div className="grid grid-cols-[60px_1fr] gap-2 items-baseline">
