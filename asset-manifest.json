@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfoliotam/static/css/main.c9383903.css",
-    "main.js": "/portfoliotam/static/js/main.91cb334c.js",
+    "main.css": "/portfoliotam/static/css/main.c68665f8.css",
+    "main.js": "/portfoliotam/static/js/main.e250e31a.js",
     "static/js/453.784b2968.chunk.js": "/portfoliotam/static/js/453.784b2968.chunk.js",
     "static/media/artistpic.png": "/portfoliotam/static/media/artistpic.0f415f646b90e7308cba.png",
     "static/media/croco8.webp": "/portfoliotam/static/media/croco8.a3ba2cde4a8e7559476b.webp",
@@ -47,12 +47,12 @@
     "static/media/wings.png": "/portfoliotam/static/media/wings.c4d102145227aac1c81a.png",
     "static/media/logo.png": "/portfoliotam/static/media/logo.b6c05c8ef6dcb5a8057a.png",
     "index.html": "/portfoliotam/index.html",
-    "main.c9383903.css.map": "/portfoliotam/static/css/main.c9383903.css.map",
-    "main.91cb334c.js.map": "/portfoliotam/static/js/main.91cb334c.js.map",
+    "main.c68665f8.css.map": "/portfoliotam/static/css/main.c68665f8.css.map",
+    "main.e250e31a.js.map": "/portfoliotam/static/js/main.e250e31a.js.map",
     "453.784b2968.chunk.js.map": "/portfoliotam/static/js/453.784b2968.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9383903.css",
-    "static/js/main.91cb334c.js"
+    "static/css/main.c68665f8.css",
+    "static/js/main.e250e31a.js"
   ]
 }
