@@ -96,17 +96,17 @@ import alien1 from './assets/photos/alien1.webp';
 
 // Données des projets - remplace par tes propres images et infos
 const projects = [
-  {
+{
     id: 1,
     title: "You licked my wounds but all I wanted was vengeance",
     year: "2025",
-    dimensions: "150 x 150 x 120 cm",
+    dimensions: "150 * 150 * 120 cm",
     materials: "Installation - Glazed stoneware, found objects",
     thumbnail: v1,
     images: [v1, v2, v3, v4, v5],
-    description: "Installation view at Einblick, Ausblick (Kiel). One piece fountain spitting wine."
+    description: "Installation view at Einblick, Ausblick (Kiel). This installation stages the material and symbolic hierarchy inherited from colonial history, where Western opulence continues to oppress, dominate, contaminate, and redefine the cultures it has seized. Upon a white cloth, initially immaculate, stands a beautiful ceramic fountain. Crafted from a single block, it imposes its presence through the technical mastery it embodies. The luxury of the fountain, the whiteness of the fabric, and the continuous flow of wine are seductive; yet, as the gaze explores the work, the illusion cracks. The mouth spitting the liquid, the glistening tongue, and the fuel pistol blend the organic with the industrial. The wine oozes, stains, and accumulates; the cloth becomes soiled, and animals marinate in bowls filled with blood-like fluid. Gradually, sweetness becomes toxic and the magical becomes obscene. The red wine, a symbol of refinement, transforms into a primal and colonial fluid: it sprays and contaminates, revealing the stains of colonization, chemical and ecological wounds, and mental/bodily craters. Surrounding the fountain, Vietnamese bowls containing animals and spoons evoke racist stereotypes while serving as symbolic figures submerged in the colonial liquid. The wine, ready for consumption, suggests the forced ingestion of a dominant culture by bodies and traditions. Ambiguous objects reminiscent of drugs and alcohol, alongside vine branches nourished by the wine, participate in a promise of abundance destined for failure. What is meant to nourish eventually exhausts, and ultimately kills. A symbolic, material, and organic violence. A 'superior' culture that spits, drools, overflows, dirties, and seeps into bodies, objects, and systems."
   },
-  {
+ {
     id: 2,
     title: "Amygdala, Epicenter of Fear",
     year: "2025",
@@ -114,9 +114,9 @@ const projects = [
     materials: "Installation - Glazed stoneware, steel, glass, sound",
     thumbnail: s2,
     images: [s2, s3, s4, s5, s6, s7, s8, s9],
-    description: "Solo Show at ProjektRaum (Kiel), link for the sound : https://soundcloud.com/tangurex/amygdala-epicenter-of-fear. The installation is comprised of the centerpiece, Sigma, Alpha, Beta, five wall ceramics, and a sound piece, made in the room after installing everything."
+    description: "Solo Show at ProjektRaum (Kiel). Sound link: https://soundcloud.com/tangurex/amygdala-epicenter-of-fear. The installation is comprised of the centerpiece 'Sigma, Alpha, Beta', five wall ceramics, and a digital sound piece. 'Sigma, Alpha, Beta' is an installation-altar where structure, hierarchy, and violence intersect. The ensemble unfolds as a temporal scene, traversed and activated by invisible forces, where every element seems to know its place. A Sigma rises upon a networked structure—futuristic, yet traditional. It sits on its throne. Silent mastery. It is the structure itself, embodying the flows and messages of indoctrination that it transfers across the landscape. Chains erupt from the structure, restraining the Alphas, who stand ready to attack. Their presence is a promise of perpetual dynamics; they initiate nothing, serving as mere tools of violence. On the ground, the Betas form a heterogeneous mass, swallowing the poison as if it were a mandatory rite of passage toward transcendence. That which wounds is integrated; that which destroys becomes the engine. It is an internalized, ingested violence, hinting at a convergence toward a so-called ideal form. The digital soundtrack, composed after the installation, extends the visual space into the sonic realm. Developed by absorbing the atmosphere, rhythms, and structural elements of the work, it resonates like the messages circulating and propagating through the networks. On the walls, familiar architectures punctuate the space. It is suggested that a poison seeps from the central structures into the local architecture. The poison normalizes, becoming almost imperceptible. Close to the ground lies a victimized sun, unrecognizable. Its light is gone, absorbed. Once an ancient figure of a distant infinite—of an incomprehensible sacred—it has finally been digested by the incarnation of a belief centered on the ascension of the individual. The work proposes a contemporary mythology, replacing ancient divinities with toxic, hierarchical beliefs that have been accepted and normalized."
   },
-  {
+{
     id: 3,
     title: "Buggin' Around",
     year: "2025",
@@ -124,7 +124,7 @@ const projects = [
     materials: "Performance - Bike Helmets, Yoga Balls",
     thumbnail: b1,
     images: [b1, b2, b3, b4, b5, b6, b7, b8],
-    description: "Performance played 4 times at Kunstlerhaus Bethanien (Berlin). Performed, written by Marie Borgerding, Lara Meise, Tâm Nguyen, Ruth Pick. Dung beetles bike helmet made by me with the help of Ruth."
+    description: "Performance played 4 times at Künstlerhaus Bethanien (Berlin), for the MONSTRUMZ exhibition. Written and performed by Tâm Nguyen in collaboration with Marie Borgerding, Lara Meise, and Ruth Pick. Dung beetle bike helmets made by Tâm Nguyen with the help of Ruth. In response to the collective performance MONSTRUMZ, which explored the 'banality of evil' through bureaucratic robotic rituals, worship of the printer, and the boredom and weariness of institutions—we staged a counter-intervention. While the bureaucrats occupied the space with stagnant, repetitive gestures of obedience, we hacked a biological and chaotic glitch into their system. Wearing dung beetle-shaped bike helmets and wielding large yoga balls, we transformed the sterile, holy administrative environment into a playground of absurd, chaotic labor. We drew inspiration from the Egyptian Dung Beetle and Khepri; in Ancient Egypt, the beetle rolling its ball of dung was a sacred metaphor for the movement of the sun across the sky. By bringing this myth into the Künstlerhaus, we replaced dead, static paper-pushing with the vital, solar momentum of the beetle. As small insects can find purpose in waste, we redefine the 'useless' task. Unlike the bureaucrat trapped in a soul-crushing routine, our movement was one of playful, unpredictable, and erratic energy—a noisy manifestation of the organic. We countered the 'weary smile' of the administration with laughter, physical pursuit, and the naivety of the game. By throwing the balls and pursuing the audience, we broke the distance inherent in institutional staging, forcing the viewer to leave the position of the passive observer of bureaucracy and become a participant in this joyful, chaotic revolt. In this space, where the Printer has become the new god of the mundane, we clashed with it by reviving the ancient rhythm of the Sun-bearer, rolling the sphere not as a burden, but as a transcendental cosmic act of play. This counter-performance acted as the 'shaking of the system' mentioned in the exhibition’s premise. We were the monsters that the bureaucracy couldn't file, categorize, or silence—the living proof that play and the grotesque are the ultimate antidotes to the cold ritual of power."
   },
   {
     id: 4,
@@ -134,7 +134,7 @@ const projects = [
     materials: "Sculpture - Glazed Stoneware, found objects",
     thumbnail: d1,
     images: [d1, d2],
-    description: "Putting children in jail. Exhibition view at FabrikStrasse (Kiel)"
+    description: "Putting children in jail. Exhibition view at FabrikStrasse (Kiel), for the exhibition Zwei Einheiten"
   },
   {
     id: 5,
@@ -146,15 +146,15 @@ const projects = [
     images: [l1, l2, l3],
     description: "Exhibition view at Kunstlerhaus Bethanien (Berlin). The statue of liberty head was bondaged in a classic shibari knot by Mr Red Donkey."
   },
-  {
+ {
     id: 6,
-    title: "The Wise crocodile",
+    title: "The Wise Crocodile",
     year: "2024",
     dimensions: "Performance, 10 minutes",
     materials: "Performance - Glazed Stoneware",
     thumbnail: c1,
     images: [c1, c2, c3, c4, c5, c6, c7, c8],
-    description: "Performance view at Ufer Studios (Berlin). Quiet symphony played out instruments made out of ceramics."
+    description: "Performance view at Ufer Studios (Berlin), for the Wolfstöne exhibition. This work explores the 'Wolf Tone'—an acoustic parasite and harmonic interference—as a metaphor for social and mythological 'disturbing noises.' I address the 'Wolf' not as a creature, but as a construct: a figure used to personify male violence and the predatory 'Alpha' archetype. To dismantle this aggression, I responded through a multisensory ritual of ceramic and breath. The performance opens with a critique of human and animal hierarchies. A series of animal-shaped ceramic instruments are treated as mere objects; scattered across the floor, they are scratched, hit, and manipulated. This reflects our historical relationship with the animal kingdom: treating them as material to be exploited, as survival tools, or as symbols to carry human fears. The initial sound is dry and the gestures are violent. However, the ritual shifts as the performers stop 'using' the objects and start listening to them; the instruments are revealed to be ocarinas and flutes. Led by the 'Wise Crocodile,' the performers rise and advance freely, guided by the will of the clay animals. As the lights dim, the chaotic noise dissolves into a serene, harmonic symphony of breath. In a final questioning of the performer/spectator divide, the performers move to sit directly among the audience. This proximity allows the sound to become an intimate, shared vibration. The wolf's howl is replaced by a collective breath, transforming a motif of exclusion and violence into a moment of guidance and sonic grace."
   },
 
     {
@@ -165,7 +165,7 @@ const projects = [
     materials: "Installation, bois, objets trouvés, encens, peinture sur toile",
     thumbnail: carou1,
     images: [carou1, carou2, carou3, carou4, carou5],
-    description: "Exhibition view at Espace Vanderboght (Brussels)"
+    description: "Exhibition view at Espace Vanderboght (Brussels). Exploring data overload by the 'carroussel' mechanics"
   },
   {
     id: 8,
@@ -175,7 +175,7 @@ const projects = [
     materials: "Céramique, bave, pièces",
     thumbnail: hot1,
     images: [hot1, hot2, hot3, hot4],
-    description: "vitesse. Exhibition view at Espace Vanderboght (Brussels)"
+    description: "vitesse. Exhibition view at Espace Vanderboght (Brussels). Exploring the 'pay to remove adds mechanics'."
   },
   {
     id: 9,
@@ -185,7 +185,7 @@ const projects = [
     materials: "Sculpture - Steel, punching ball, acrylics on wood",
     thumbnail: punch1,
     images: [punch1],
-    description: "Exhibition view at Espace Vanderboght (Brussels)"
+    description: "Exhibition view at Espace Vanderboght (Brussels). Exploring the 'hit the like button' mechanics."
   },
   {
     id: 10,
@@ -610,23 +610,14 @@ const playEvilSound = () => {
         <h2 className="text-4xl basteleur uppercase tracking-tighter">Statement</h2>
         <div className="space-y-4 text-gray-300 leading-relaxed karrik text-base">
           <p>
-            Mon travail se base sur le sentiment d’aliénation que je ressens : au travail, face à la surcharge informationnelle, face à la norme sociale. Ce malaise, je pouvais l’apaiser en ligne, m’y évader. Autrefois terre de rêves, d’émancipation, de connexions, Internet a changé. Ce qui me semblait être un espace de possibilités infinies semble désormais étouffant, dépouillé de sa magie.
-          </p>
+My artistic practice is a satirical dissection of intertwined power structures. Whether they are colonial, social, or technological, I see them as stemming from the same entity. My work digs into profound experiences of alienation: from production culture, the overload of low-quality information, to the collapse of digital utopias. To me, the internet, once a territory of emancipation and wonder, has become a suffocating land, colonized by the same forces responsible for the flatlining of physical spaces, leaving an empty, haunted landscape full of false promises.          </p>
           <p>
-            Quel monstre a tué cette excitation ? Quel fantôme persiste, se nourrit de nos pensées, nécrose nos expériences, empêche notre émerveillement ? Quelles sont ses armes ?
-          </p>
+I investigate the monsters that feed on our thoughts and annihilate our experiences. To counter this emotional annihilation, I activate a protective practice based on joy, play, absurdity, and grotesque. Through a multidisciplinary approach, I create chaotic ecosystems with an emphasis on organicity. These environments are saturated with references and symbolism, acting as spaces where hierarchies are broken, beliefs are questioned, and levels of importance rewritten.          </p>
           <p>
-            Mon esprit s’est engourdi. Dès lors, une question centrale se pose : comment sortir de cet état d’annihilation émotionnelle et physique ? Si l’espoir de reprendre la maîtrise de la situation me semble légitime, il paraît parfois illusoire ou vain.
-          </p>
+My current research revolves around the creation of speculative mythologies, digital hauntings, dysfunctional rituals. By hijacking pop culture icons, notably the Pikachu figure, and the life of my ancestors, I address intimate and political themes such as technological obsolescence, the anger of a meaningless life, and the asylum seeking experience. My works functions as spectral bugs: dysfunctional image carousels, new distorted divinities, contaminating fountains… All pinpointing the contradictions between the false expired hopes fed to us, our underlying cultural heritage wounds and our new hollow divinities: the ego, the worship of raw muscles, the violent ascent over others... Maybe we are trying to convince ourselves that through dominating performances and individualism, we might still survive the imminent crash.          </p>
           <p>
-            Ainsi, je suis déjà nostalgique d’un avenir, comme s’il était déjà perdu… Comme s’il était déjà trop tard ? C’est à travers ces questionnements que je confronte le spectre du technocapitalisme, un rouage qui ronge nos mondes, les dévore de l’intérieur.
-          </p>
-          <p>
-            J’enclenche ainsi pour me défendre une pratique basée sur le jeu, l’absurde, le grotesque ; pratique protéiforme qui passe par la peinture, la sculpture, la performance…
-          </p>
-          <p>
-            L’idée d’un monde chaotique composite me plaît beaucoup : un monde où les corps sont distordus, hybrides, les objets ambigus ; où les rituels sont foireux, détournés. Je jongle avec tout cela en essayant de créer une tension drôle entre le jeu et le malaise.
-          </p>
+I am playing with references ranging from the sacred to the lowbrow to create a permanent tension between humor, the intentional stupidity of play and an uncanny reality. I aim to transform numbness into a form of life-clinging, visceral resistance.          </p>
+
         </div>
       </div>
     </div>
