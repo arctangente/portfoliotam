@@ -527,6 +527,18 @@ const playEvilSound = () => {
     >
       WORKS
     </button>
+
+      {/* NOUVEAU BOUTON SCREENPLAY */}
+  <button
+    onClick={() => setActiveSection('screenplay')}
+    className={`text-sm basteleur tracking-wider transition-colors ${
+      activeSection === 'screenplay' ? 'text-white' : 'text-gray-500'
+    }`}
+  >
+    SCREENPLAY
+  </button>
+
+
     <button
       onClick={() => setActiveSection('about')}
       className={`text-sm basteleur tracking-wider transition-colors ${
@@ -585,7 +597,96 @@ const playEvilSound = () => {
 )}
 
 
+{/* Screenplay Section */}
+{activeSection === 'screenplay' && (
+  <div className="max-w-4xl mx-auto py-20 px-6 animate-in fade-in duration-1000">
+    <div className="mb-16 text-center">
+      <h2 className="text-4xl basteleur uppercase tracking-tighter mb-4">Screenplay</h2>
+      <p className="karrik text-xs text-red-600 tracking-[0.2em] uppercase">Extract of the screenplay I'm writing. This is a lab, a catalysor for tangible ideas.</p>
+    </div>
 
+    {/* Le texte du scénario avec un style "Courier/Typewriter" pour l'authenticité */}
+    <div className="bg-zinc-900/30 p-8 md:p-12 border border-white/5 rounded-sm shadow-2xl">
+      <div className="max-w-2xl mx-auto space-y-6 text-gray-300 leading-relaxed font-mono text-sm md:text-base">
+        
+        <p className="text-white">
+          <span className="font-bold text-red-500 uppercase mr-2">Daisy :</span> 
+Mais c’est déjà ce qui arrive, tu as vu à quoi ça ressemble dehors? C’est un cimetière, des
+familles entières se sont fait désactiver, des millions se déchargent lentement, c’est la panique, des
+mouvements de protestations se créent en ce moment même, peut être à juste titre, vu comment on
+les traite. On les a parqué dans des câbles comme des vulgaires fils de fer. Les infrastructures sont
+pas entretenues, ça tombe en ruine, c’est insalubre, on découvre des cas de rouilles tous les jours.
+En plus l’accord tacite entre les autorités et les dealers qui leurs permettent de vendre leurs merde
+là, qui ramène de plus en plus d’ange dans les câbles, la cohabitation est extrêmement difficile.
+C’est tout à fait normal que la colère monte. Les Pika-bots n’en peuvent plus, j’ai peur de ce qu’il
+peut se passer.        </p>
+
+        <p className="text-white">
+T’as pas entendu parler du Pika-bot67? Il réunit de plus en plus d’abonnés. Il fait des danses qui
+deviennent virales, des mukbang, des reviews, des podcasts, des analyses, des pranks mais ça c’est
+la surface. J’ai entendu dire qu’il a été nommé Pika-god par le mouvement des tricots verts, le
+mouvement de libération extrémiste cyberadical. Ils croient en lui, ils se réunissent autour de lui, ils
+prient. Ils prient pour qu’ils les libèrent. Ils prient pour qu’ils les vengent, pour qu’ils les
+rebranchent, qu’ils les réparent, qu’ils les upgrade. Ils utilisent un moyen de communication
+complètement hermétique pour s’organiser sans qu’on puisse les surveiller, on dit qu’ils préparent
+quelque chose. Peut être une guerre.        </p>
+
+        <p className="italic text-gray-500 text-xs border-l border-gray-700 pl-4 py-1">
+          Elle triture son collier de perles de Tahiti nerveusement.
+        </p>
+
+        <p className="text-white">
+          <span className="font-bold text-red-500 uppercase mr-2">Picsou :</span> 
+Il manquerait plus que ça, une guerre triable. Moi je les massacre quand tu veux. Femmes,
+enfants, je les démembre, je les décapite, je les mets sur un piquet. Non mais tu sais c’est dans notre
+sang, c’est primaire, on déteste les robots. Même si ce conflit se passe pas sur ton territoire, c’est
+comme une équipe de foot. Tu vas toujours soutenir ton équipe quoi qu’il arrive, même si t’es pas
+dans le match. De toute façon à la belle époque on adorait ça les victimiser, les faire tourner en
+
+bourrique, sentir leurs gemmes entre nos doigts. S’ils deviennent une menace, qu’on aille les
+recycler alors, c’est ce que je te dis, j’vois pas le problème, ils rendent le paysage immonde, ils
+défoncent nos câbles, des parasites comme ça, je te dis, soit on les concentre, soit on les déporte ou
+on les extermine, ces putains de robots.        </p>
+
+        <p className="text-white italic">
+          <span className="font-bold text-red-500 uppercase mr-2 ">Daisy :</span> pas de R-word dans cette maison s’il te plaît.
+        </p>
+
+        <p className="italic text-gray-500 text-xs border-l border-gray-700 pl-4 py-1">
+          Pika-bot s’arrête et se retourne vers Picsou, il à l’air choqué. Picsou baffe violemment le Pika-bot sur l’arrière de son crane, le robot vacille. L’impact créé une onde dans les bols de nouilles.
+        </p>
+
+        <p className="text-white">
+          <span className="font-bold text-red-500 uppercase mr-2 ">Picsou :</span> Regarde il sent rien, c’est pas comme s’il allait s’évanouir hein ?
+        </p>
+
+        <p className="text-yellow-500 font-bold tracking-tighter">
+          Pika-bot : pika pikarretestpcpassupercool
+        </p>
+
+        <p className="italic text-gray-500 text-xs border-l border-gray-700 pl-4 py-1">
+          Daisy reste planté sur l’assise de sa chaise designer en cantilever... Ses doigts blanchissent sous la pression, le sang se coupe doucement, sa main s’anesthésie, ses ongles plantés dans le cadre en bois comme des fléchettes.
+        </p>
+ <p className="italic text-gray-500 text-xs border-l border-gray-700 pl-4 py-1">
+
+  Picsou lui mets des balayettes, Pika-bot se relève, l’algorithme de stabilisation intégré lui donnant
+assez de momentum pour se remettre en position debout, bien ancré au sol. Un front kick rageur est
+asséné pile sur le cœur du Pika-bot. Il chancelle, c’est l’occasion parfait pour Picsou de lui met un
+single-leg. La défense de lutte du Pika-bot laisse à désirer. Après un enchaînement bien senti, le
+Pika-bot se retrouve au sol, allongé contre le lino collant.
+ </p>
+        <p className="text-white italic text-center py-4 opacity-50">
+          [...]
+        </p>
+
+        <p className="italic text-gray-500 text-xs border-l border-gray-700 pl-4 py-1">
+          Une odeur âcre, mélange de vieille poussière brûlant sur une résistance électrique, et de plastique chauffé se dégage du Pika-bot... Picsou re-rentre sa chemise en lin blanche tout en remontant son pantalon en velours cottelé. Il applaudit deux fois pour rallumer la lumière. Il se rassied sur la chaise, un peu honteux, mais aussi un peu fier de cette démonstration de force.
+        </p>
+
+      </div>
+    </div>
+  </div>
+)}
 
 
 
