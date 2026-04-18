@@ -637,9 +637,8 @@ quelque chose. Peut être une guerre.        </p>
 
         <p className="text-white">
           <span className="font-bold text-red-500 uppercase mr-2">Picsou :</span> 
-Il manquerait plus que ça, une guerre triable. Moi je les massacre quand tu veux. Femmes,
-enfants, je les démembre, je les décapite, je les mets sur un piquet. Non mais tu sais c’est dans notre
-sang, c’est primaire, on déteste les robots. Même si ce conflit se passe pas sur ton territoire, c’est
+Il manquerait plus que ça, une guerre tribale. Moi je les massacre quand tu veux. Je les démembre, je les décapite, je les mets sur un piquet. Non mais tu sais c’est dans notre
+sang, c’est primaire, on déteste les robots. C’est
 comme une équipe de foot. Tu vas toujours soutenir ton équipe quoi qu’il arrive, même si t’es pas
 dans le match. De toute façon à la belle époque on adorait ça les victimiser, les faire tourner en
 
@@ -709,18 +708,43 @@ Pika-bot se retrouve au sol, allongé contre le lino collant.
       {/* Texte de Statement - Taille de police ajustée */}
       <div className="space-y-6">
         <h2 className="text-4xl basteleur uppercase tracking-tighter">Statement</h2>
-        <div className="space-y-4 text-gray-300 leading-relaxed karrik text-base">
-          <p>
-My artistic practice is a satirical dissection of intertwined power structures. Whether they are colonial, social, or technological, I see them as stemming from the same entity. My work digs into profound experiences of alienation: from production culture, the overload of low-quality information, to the collapse of digital utopias. To me, the internet, once a territory of emancipation and wonder, has become a suffocating land, colonized by the same forces responsible for the flatlining of physical spaces, leaving an empty, haunted landscape full of false promises.          </p>
-          <p>
-I investigate the monsters that feed on our thoughts and annihilate our experiences. To counter this emotional annihilation, I activate a protective practice based on joy, play, absurdity, and grotesque. Through a multidisciplinary approach, I create chaotic ecosystems with an emphasis on organicity. These environments are saturated with references and symbolism, acting as spaces where hierarchies are broken, beliefs are questioned, and levels of importance rewritten.          </p>
-          <p>
-My current research revolves around the creation of speculative mythologies, digital hauntings, dysfunctional rituals. By hijacking pop culture icons, notably the Pikachu figure, and the life of my ancestors, I address intimate and political themes such as technological obsolescence, the anger of a meaningless life, and the asylum seeking experience. My works functions as spectral bugs: dysfunctional image carousels, new distorted divinities, contaminating fountains… All pinpointing the contradictions between the false expired hopes fed to us, our underlying cultural heritage wounds and our new hollow divinities: the ego, the worship of raw muscles, the violent ascent over others... Maybe we are trying to convince ourselves that through dominating performances and individualism, we might still survive the imminent crash.          </p>
-          <p>
-I am playing with references ranging from the sacred to the lowbrow to create a permanent tension between humor, the intentional stupidity of play and an uncanny reality. I aim to transform numbness into a form of life-clinging, visceral resistance.          </p>
-
-        </div>
-      </div>
+<div className="space-y-4 text-gray-300 leading-relaxed karrik text-base">
+  <p>
+    Ma pratique est une dissection satirique de l'entremêlement des structures de pouvoir. Qu'elles soient coloniales, sociales ou technologiques, je les perçois comme enfantées par une seule et même entité monstrueuse.
+  </p>
+  <p>
+    Comme point de départ, je creuse les expériences d'aliénation que je ressens face à la culture productiviste, au racisme structurel, à l'ordre social... J'interroge particulièrement la mutation d'Internet : autrefois terre d'émancipation, devenue superstructure réseautique de surveillance, de propagande et de manipulations connectées à nos désirs, entraînant un cognicide et un kinécide de masse.
+  </p>
+  <p>
+    Pour contrer cette annihilation, j'active une pratique d'autodéfense où je réinvoque le pur enfant intérieur et son amour du jeu, à travers une collecte d'images, de jouets, d'objets, « maudits ». Ces artefacts sont pour moi les spectres d'une insouciance perdue, d'un futur rempli de fausses promesses, témoignant d'un système métamorphosé en technoféodalisme<sup>1</sup>. C'est ici que ma recherche rejoint l'hantologie de Mark Fisher : je vois ces rebuts comme les vestiges d'un futur qui n'est jamais advenu.
+  </p>
+  <p>
+    Que faire de ces symboles vidés de sens? Les recycler, les transformer, construire autour, s'en inspirer, y réinsuffler de la vie, de la contestation, sortir du cycle infernal.
+  </p>
+  <p className="font-semibold">
+    Stratégie du leurre et séduction toxique
+  </p>
+  <p>
+    Ma pratique repose sur une stratégie de séduction toxique. J'utilise des codes attractifs : objets pop, matières brillantes, mouvements, interactivités, couleurs édulcorées, pour véhiculer mes messages. Une sorte de click-bait, un leurre qui capture l'attention, qui parle d'une violence sous-jacente.
+  </p>
+  <p>
+    Je peux donner corps à des oppressions systémiques en les transformant en objets de désir: une fontaine qui vomit devient le symbole d'un racisme structurel, tandis qu'un totem de l'homme « sigma » érige la masculinité toxique en divinité contemporaine. Ce court-circuit force la confrontation avec l'insupportable derrière le vernis du divertissement.
+  </p>
+  <p className="font-semibold">
+    Mythologies spéculatives et rituels dysfonctionnels
+  </p>
+  <p>
+    Mes recherches actuelles s'articulent autour de la création d'un récit spéculatif sous forme d'un scénario. J'y détourne des icônes de la pop culture, notamment la figure de Pikachu, et l'histoire de mes ancêtres, j'aborde des thèmes intimes et politiques tels que l'obsolescence de l'humain cyborg et l'épopée d'une quête impossible d'asile, dans un hypermonde absurde.
+  </p>
+  <p>
+    Face à « la lente annulation du futur<sup>2</sup> », mes œuvres pointent du doigt nos nouvelles divinités creuses : l'individu, l'argent et la domination violente sur l'autre. Je joue avec des références allant du sacré au « lowbrow » pour créer une tension permanente entre l'humour, la stupidité et une réalité inquiétante. Dans cette époque charnière, mon but est de transformer l'engourdissement ressenti face aux leurres que le système nous présente, en une forme de résistance viscérale, une critique nécessaire, un sursaut qui nous agrippe à la vie alors que tout nous échappe.
+  </p>
+  
+  <div className="text-xs text-gray-500 mt-8 space-y-1">
+    <p><sup>1</sup> Technofeudalism: What Killed Capitalism, Yánis Varoufákis, Bodley Head, 2023</p>
+    <p><sup>2</sup> Ghosts of my life, Mark Fisher, Entremonde, 2021</p>
+  </div>
+</div>      </div>
     </div>
 
     {/*  (Exhibitions & Education) --- */}
